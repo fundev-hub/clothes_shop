@@ -1,0 +1,711 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: rgb(43, 40, 68);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+}
+
+/*=================================================================*/
+
+/*======================  Header section  ========================*/
+.header {
+  width: 100%;
+  height: 6rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 0.6rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.header.active {
+  background-color: rgb(0, 0, 0);
+}
+
+.brand-logo {
+  font-family: Pattaya, sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.logo img {
+  width: 7rem;
+  padding-right: 0.9rem;
+}
+
+.hamburger-menu {
+  font-size: 2.6rem;
+  padding: 0.7rem;
+  color: #ffffff;
+  z-index: 100;
+}
+
+.hamburger-menu .fa-times {
+  display: none;
+}
+
+.nav {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(4, 6, 26, 0.98);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.nav-open .nav {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-open .hamburger-menu .fa-times {
+  display: block;
+}
+
+.nav-open .hamburger-menu .fa-bars {
+  display: none;
+}
+
+.nav-item {
+  padding: 1.75rem;
+  font-size: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  padding: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/*=================================================================*/
+
+/*========================   Home main section ====================*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/home.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heading {
+  color: #ffffff;
+  margin-bottom: 2.4rem;
+}
+
+.heading .title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading .sub-title {
+  font-size: 2rem;
+  font-family: Pattaya, sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  background-color: #706c6c;
+  border-radius: 2.5rem;
+  color: #ffffff;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
+}
+
+/*=================================================================*/
+
+/*=======================  New Arrival Styles =====================*/
+.new-arrival {
+  width: 100%;
+  background-color: #101846;
+}
+
+.heading-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  /*background: linear-gradient(to right, black,rgb(66, 35, 92),black);*/
+  background-color: rgba(65, 86, 153, 0.89);
+}
+
+.heading-top .title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading-top .sub-title {
+  font-size: 1.6rem;
+  font-family: Pattaya, sans-serif;
+  letter-spacing: 1px;
+}
+
+.new-arrival-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.new-arrival-clothes {
+  width: 100%;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  opacity: 0;
+}
+
+.new-arrival-clothes.fade-in {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.relative-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clothes-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.price {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-family: Pattaya, sans-serif;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.price:hover {
+  background: linear-gradient(to right, #fff, rgb(152, 9, 248));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.content-description {
+  width: 90%;
+  height: 90%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.842);
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.content-description:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.content-description .brand {
+  font-size: 3.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem;
+}
+
+.content-description .description {
+  font-size: 2rem;
+  padding: 1rem 1rem 0rem 1rem;
+  font-family: Pattaya, sans-serif;
+}
+
+/*=================================================================*/
+
+/*==========================  Explore Section Styles ==============*/
+
+.explore {
+  width: 100%;
+  background-color: rgb(2, 51, 53);
+}
+
+.explore-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  position: absolute;
+  font-size: 3.4rem;
+  margin-top: 6rem;
+}
+
+.fa-chevron-left {
+  left: 0;
+  margin-left: 0.5rem;
+}
+
+.fa-chevron-right {
+  right: 0;
+  margin-right: 0.5rem;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+  color: #ffffff;
+}
+
+.shoe-product-section,
+.shirt-product-section,
+.pant-product-section,
+.bag-product-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.bag-product-section {
+  border: none;
+  padding-bottom: 9rem;
+}
+
+.shoe-section,
+.shirt-section,
+.pant-section,
+.bag-section {
+  color: #23b5cf;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  padding: 0rem 2rem;
+  background-color: rgb(2, 51, 53);
+}
+
+.shoe-section {
+  padding: 0rem;
+  border-bottom: 3px solid #ffffff;
+}
+
+.shoe-wraper,
+.shirt-wraper,
+.pant-wraper,
+.bag-wraper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.product-wraper {
+  padding: 0rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.products {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #706c6c;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-images-shoe,
+.product-images-shirt,
+.product-images-pant,
+.product-images-bag {
+  border-radius: 5px 5px 0px 0px;
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+/*=================================================================*/
+
+/*========================  Footer Section Styles =================*/
+.footer {
+  background-color: rgb(2, 8, 66);
+}
+
+.footer-content {
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.company {
+  padding-bottom: 3rem;
+  width: 90%;
+}
+
+.company-name-logo {
+  display: flex;
+}
+
+.company-name-logo img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.company-name {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+
+.company-name .name {
+  text-transform: uppercase;
+}
+
+.company-name .location {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.company .paragraph {
+  font-family: pattaya, sans-serif;
+  padding: 1rem 0rem;
+  font-size: 1.3rem;
+}
+
+.contact {
+  width: 100%;
+}
+
+.contact h1 {
+  font-size: 3.6rem;
+  padding-bottom: 1rem;
+}
+
+.contact h4 {
+  font-size: 1.5rem;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.4px;
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.social-links h3 {
+  font-size: 1.6rem;
+}
+
+.media-icons {
+  padding-left: 2rem;
+  font-size: 1.8rem;
+}
+
+.media-link {
+  padding: 0.5rem;
+}
+
+.media-link:hover {
+  color: rgb(25, 186, 214);
+}
+
+/*=================================================================*/
+/*======================    Media Queries   =======================*/
+/*=================================================================*/
+
+/* Header Section Media Queries */
+
+@media (min-width: 600px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .brand-logo {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: initial;
+    display: initial;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .nav-item {
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    display: initial;
+    align-items: center;
+  }
+}
+
+@media (min-width: 715px) {
+  /* Header styles */
+  .header {
+    padding: 2rem 1rem 2rem 3rem;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 900px) {
+  /* Header styles */
+  .header {
+    padding: 3.4rem 4rem;
+  }
+
+  .nav-link {
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+/*=================================================================*/
+
+/* New Arrival Section Media Queries */
+@media (min-width: 526px) {
+  /* New Arrival Section */
+  .new-arrival-clothes {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  .heading-top {
+    padding: 1.5rem;
+  }
+
+  .heading-top .title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+
+  .heading-top .sub-title {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 760px) {
+  .from-left {
+    transform: translateX(-50%);
+  }
+
+  .from-right {
+    transform: translateX(50%);
+  }
+  .from-left.fade-in {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .from-right.fade-in {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* New Arrival Section */
+  .new-arrival-clothes {
+    max-width: 47rem;
+    min-width: 40rem;
+  }
+
+  .heading-top {
+    padding: 2.5rem;
+  }
+
+  .heading-top .title {
+    font-size: 5rem;
+    letter-spacing: 4px;
+  }
+
+  .heading-top .sub-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+/*====================================================================*/
+
+/* Explore Section Styles Media Queries */
+
+@media (min-width: 644px) {
+  .fa-chevron-left,
+  .fa-chevron-right {
+    display: none;
+  }
+
+  .shoe-section,
+  .shirt-section,
+  .pant-section,
+  .bag-section {
+    font-size: 2.3rem;
+    margin-top: -2.5rem;
+  }
+
+  .product-wraper {
+    min-width: initial;
+    max-width: initial;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .product-images-shoe {
+    max-width: 15rem;
+  }
+
+  .product-images-shirt,
+  .product-images-pant,
+  .product-images-bag {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 962px) {
+  .product-images-shoe {
+    max-width: 25rem;
+  }
+
+  .product-images-shirt,
+  .product-images-pant,
+  .product-images-bag {
+    max-width: 30rem;
+  }
+}
+
+/*=================================================================*/
+
+/* Footer Section Styles Media Queries*/
+@media (min-width: 644px) {
+  .footer-content {
+    padding-left: 9rem;
+  }
+
+  .company-name {
+    font-size: 1.6rem;
+    padding: 1.3rem;
+  }
+
+  .company-name-logo img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .company .paragraph {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 962px) {
+  .footer-content {
+    padding-left: 1rem;
+    flex-direction: initial;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    padding-left: 3rem;
+    width: 45%;
+  }
+
+  .contact h4 {
+    font-size: 2rem;
+  }
+
+  .social-links h3 {
+    font-size: 2rem;
+  }
+}
